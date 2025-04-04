@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced RTL Support */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Margin adjustments for RTL */
+.rtl .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.rtl .mr-auto {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.rtl .ml-1,
+.rtl .ml-2,
+.rtl .ml-3,
+.rtl .ml-4,
+.rtl .ml-5,
+.rtl .ml-6,
+.rtl .ml-8 {
+  margin-left: 0;
+}
+
+.rtl .mr-1,
+.rtl .mr-2,
+.rtl .mr-3,
+.rtl .mr-4,
+.rtl .mr-5,
+.rtl .mr-6,
+.rtl .mr-8 {
+  margin-right: 0;
+}
+
+.rtl .ml-1 {
+  margin-right: 0.25rem;
+}
+.rtl .ml-2 {
+  margin-right: 0.5rem;
+}
+.rtl .ml-3 {
+  margin-right: 0.75rem;
+}
+.rtl .ml-4 {
+  margin-right: 1rem;
+}
+.rtl .ml-5 {
+  margin-right: 1.25rem;
+}
+.rtl .ml-6 {
+  margin-right: 1.5rem;
+}
+.rtl .ml-8 {
+  margin-right: 2rem;
+}
+
+.rtl .mr-1 {
+  margin-left: 0.25rem;
+}
+.rtl .mr-2 {
+  margin-left: 0.5rem;
+}
+.rtl .mr-3 {
+  margin-left: 0.75rem;
+}
+.rtl .mr-4 {
+  margin-left: 1rem;
+}
+.rtl .mr-5 {
+  margin-left: 1.25rem;
+}
+.rtl .mr-6 {
+  margin-left: 1.5rem;
+}
+.rtl .mr-8 {
+  margin-left: 2rem;
+}
+
+/* Padding adjustments for RTL */
+.rtl .pl-1,
+.rtl .pl-2,
+.rtl .pl-3,
+.rtl .pl-4,
+.rtl .pl-8 {
+  padding-left: 0;
+}
+
+.rtl .pr-1,
+.rtl .pr-2,
+.rtl .pr-3,
+.rtl .pr-4,
+.rtl .pr-8 {
+  padding-right: 0;
+}
+
+.rtl .pl-1 {
+  padding-right: 0.25rem;
+}
+.rtl .pl-2 {
+  padding-right: 0.5rem;
+}
+.rtl .pl-3 {
+  padding-right: 0.75rem;
+}
+.rtl .pl-4 {
+  padding-right: 1rem;
+}
+.rtl .pl-8 {
+  padding-right: 2rem;
+}
+
+.rtl .pr-1 {
+  padding-left: 0.25rem;
+}
+.rtl .pr-2 {
+  padding-left: 0.5rem;
+}
+.rtl .pr-3 {
+  padding-left: 0.75rem;
+}
+.rtl .pr-4 {
+  padding-left: 1rem;
+}
+.rtl .pr-8 {
+  padding-left: 2rem;
+}
+
+/* Border radius adjustments for RTL */
+.rtl .rounded-l-md {
+  border-radius: 0;
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+
+.rtl .rounded-r-md {
+  border-radius: 0;
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+/* Flex direction for RTL */
+.rtl .flex-row {
+  flex-direction: row-reverse;
+}
+
+/* Text alignment for RTL */
+.rtl .text-left {
+  text-align: right;
+}
+
+.rtl .text-right {
+  text-align: left;
+}
+
+/* Icon rotation for RTL */
+.rtl .rotate-180 {
+  transform: rotate(0deg);
+}
+
+.rtl .group-data-\[state\=open\]\/collapsible\:rotate-180 {
+  transform: rotate(0deg);
+}
+
+/* Transition for theme switching */
+.dark,
+:root {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth transitions for components */
+button,
+a,
+input,
+select,
+textarea {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* RTL specific overrides for shadcn components */
+.rtl .items-start {
+  align-items: flex-start;
+}
+
+.rtl [dir="ltr"] {
+  direction: rtl;
+}
+
+.rtl [data-side="right"] {
+  margin-right: var(--radix-dropdown-menu-content-transform-origin-x);
+  margin-left: 0;
+}
+
+/* Fix for dropdown menu alignment in RTL */
+.rtl [data-align="end"] {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Fix for icons in RTL */
+.rtl svg {
+  transform: scaleX(1);
+}
+
+.rtl .rotate-icon svg {
+  transform: scaleX(-1);
+}
+
+/* Fix for notification badge in RTL */
+.rtl .absolute.top-0.right-0 {
+  right: auto;
+  left: 0;
+}
+
